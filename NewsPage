@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="news.css">
+</head>
+<style>
+    /*  (header mainContent footer) CSS code that will remain same in all the pages */
+    
+    * {
+        /*  ( * ) selector is used to select all elements in  webpage */
+        padding: 0;
+        margin: 0;
+        font-family: 'Trebuchet MS', sans-serif;
+        box-sizing: border-box;
+        transition: all 700ms ease;
+    }
+    /* Header Section Code Start */
+    
+    .header {
+        padding: 10px;
+        width: 100%;
+        background: #333;
+        color: #fff;
+    }
+    
+    .mainHeading,
+    .subHeading {
+        position: absolute;
+        top: 30px;
+        left: 200px;
+        font-size: 30px;
+    }
+    
+    .subHeading {
+        position: absolute;
+        top: 75px;
+        left: 200px;
+        font-size: 25px;
+    }
+    /* Header Section Code End */
+    
+    .container {
+        position: absolute;
+        top: 30%;
+        background-color: #333;
+        width: 250px;
+        height: 50%;
+    }
+    
+    ul li:first-child a {
+        /* -> accessing the anchor tag inside LIST-ITEM where LIST-ITEM is first child of UNORDERED LIST  */
+        /* -> to add space between top-border and first anchor tag (HOME)   */
+        margin-top: 50px;
+    }
+    
+    .container a {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        padding: 10px;
+        /* -> LETTER-SPACE use to add space between character by default the value of letter spacing is 0 */
+        letter-spacing: 1px;
+    }
+    
+    li a:hover {
+        letter-spacing: 2px;
+        color: white;
+        background-color: black;
+    }
+    
+    .mainContainer {
+        height: 60%;
+        width: 70%;
+        position: absolute;
+        right: 60px;
+        top: 25%;
+        background: #333;
+    }
+    
+    .footer {
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background: #333;
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .footer i {
+        padding-left: 20px;
+    }
+    
+    .footer i:hover {
+        color: royalblue;
+        transform: translateY(-10px);
+        /* TranslateY change the y-axis of element */
+        /* positive value will change y-axis is downwards and negtive value change in upwards */
+    }
+    
+    i.ig-logo:hover {
+        /* Accessing the i with class( ig-logo ) */
+        /* to add different color to instagram logo on hover */
+        color: #e95950;
+    }
+    
+    i.yt-logo:hover {
+        /* Accessing the i with class( yt-logo ) */
+        /* to add different color to youtube logo on hover */
+        color: #ff0000;
+    }
+    /*  */
+    /* ------------------------------------------------------------------------------ */
+    /* News Page Css */
+    
+    .newsContent {
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        overflow: auto;
+        box-sizing: border-box;
+    }
+    
+    .newsContent h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 40px;
+    }
+    
+    .newsContent .newsCard {
+        height: 80%;
+        max-width: 40%;
+        width: 100%;
+        background: #fff;
+        padding: 20px 20px;
+        display: inline-block;
+        margin-left: 70px;
+        margin-top: 40px;
+        /* font-size: 20px; */
+        overflow: auto;
+    }
+    
+    .newsCard img {
+        height: 200px;
+    }
+    
+    .newsCard p {
+        margin: 20px 10px;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <nav>
+            <img src="https://aiu.edu.pk/html/treely/images/logoaiu.png" width="150">
+            <h2 class="mainHeading"> Alhamd Islamic University</h2><br>
+            <h3 class="subHeading"> We Change Lives</h3>
+        </nav>
+    </div>
+    <!-- Sidebar Container -->
+    <div class="container">
+
+        <ul>
+            <li><a href="home.html">Home</a></li><br>
+            <br>
+            <li><a href="news.html">News</a></li><br>
+            <br>
+            <li><a href="">Contact</a></li><br>
+            <br>
+            <li><a href="aboutus.html">About</a></li><br>
+            <br>
+        </ul>
+    </div>
+
+    <!-- Main Container where content dynamically change according to page-->
+    <div class="mainContainer">
+
+        <!-- Home Content contain home page content only -->
+        <div class="newsContent">
+            <h1>News</h1>
+            <div class="newsCard">
+                <img src="https://www.princeton.edu/sites/default/files/styles/third_1x_crop/public/images/2022/04/NASA-colliding-black-holes-2880x1624px-Screen%20Shot%202022-04-12%20at%209.36.51%20AM%20copy.jpg?itok=fYeqTAzn" alt="">
+                <p>Princeton researchers find 10 new black hole mergers hiding in the data from LIGO and Virgo</p>
+                <p>In the last seven years, scientists at the LIGO-Virgo collaboration have detected at least 90 gravitational wave signals. Gravitational waves are perturbations in the fabric of spacetime that race outwards from cataclysmic events like
+                    the merger of binary black holes. In observations from the first half of the most recent experimental run, which continued for six months in 2019, the collaboration reported receiving signals from 44 binary black hole mergers.. </p>
+            </div>
+            <div class="newsCard">
+                <img src="https://www.princeton.edu/sites/default/files/styles/third_1x_crop/public/images/2022/04/Dave-standing-close-up%5B4%5D_crop_3000x1687.jpg?itok=4Vh4Jrl1" alt="">
+                <p>MacMillan forms charitable fund with Nobel Prize money</p>
+                <p>Chemistry Nobel Laureate David MacMillan is doing something novel with his Nobel Prize money — he’s giving it away to Scottish school kids.</p>
+            </div>
+            <div class="newsCard">
+                <img src="https://www.princeton.edu/sites/default/files/styles/third_1x_crop/public/images/2022/04/iStock-1347146698_3000x1688.jpg?itok=jU9sVLis" alt="">
+                <p>DataX is funding eight new AI research projects across disciplines</p>
+                <p>Eight new interdisciplinary research projects have won seed funding from Princeton University’s Schmidt DataX Fund, marking the third round of grants undertaken by the fund since 2019. The fund, supported through a major gift from the
+                    Schmidt Futures Foundation, provides grants to explore using artificial intelligence and machine learning to accelerate discovery.</p>
+            </div>
+            <div class="newsCard">
+                <img src="https://www.princeton.edu/sites/default/files/styles/scale_1440/public/images/2022/04/DeviceOverlay_cropped-1280.png?itok=mPVbu_Re" alt="">
+                <p>Princeton’s Mellon Fellows are bringing fresh perspectives to research A discovery by Princeton physicists is paving the way for silicon-based technologies in quantum computing, especially as quantum bits — the basic units of quantum computers.</p>
+            </div>
+            <div class="newsCard">
+                <img src="https://www.princeton.edu/sites/default/files/styles/half_2x/public/images/2022/03/MisinformationBattle2600x1600_b.jpg?itok=KnjUHXqsk" alt="">
+                <p>A Princeton-Microsoft project is tracing the digital fingerprints of disinformation</p>
+                <p>As the 2018 U.S. mid-term elections approached, a group of Princeton alumni military veterans pitched an idea to the School of Public and International Affairs to host a conference on national security.</p>
+
+            </div>
+            <div class="newsCard">
+                <img src="https://www.princeton.edu/sites/default/files/styles/half_2x/public/images/2022/04/PierreAzou-EmmaButtin_030722_0088.jpg?itok=MCyY-wig" alt="">
+                <p>Grad students and nonprofits are learning from each other in a partnership for the public good</p>
+                <p>Pallavi Podapati decided to pursue a Ph.D. in history of science with the idea that having a deep reserve of historical knowledge could make her a better policy advocate. She has since found that the reverse is also true: that working
+                    the policy world has helped her to refine and apply her academic training.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <!-- These icons are coming from link at line number 8  -->
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram ig-logo"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube yt-logo"></i>
+        <i class="fa-solid fa-copyright"></i>
+        <i class="fa-solid fa-registered"></i>
+    </div>
+
+</body>
+
+</html>
