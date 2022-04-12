@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aboutus.css">
+</head>
+<style>
+    /*  (header mainContent footer) CSS code that will remain same in all the pages */
+    
+    * {
+        /*  ( * ) selector is used to select all elements in  webpage */
+        padding: 0;
+        margin: 0;
+        font-family: 'Trebuchet MS', sans-serif;
+        box-sizing: border-box;
+        transition: all 700ms ease;
+    }
+    /* Header Section Code Start */
+    
+    .header {
+        padding: 10px;
+        width: 100%;
+        background: #333;
+        color: #fff;
+    }
+    
+    .mainHeading,
+    .subHeading {
+        position: absolute;
+        top: 30px;
+        left: 200px;
+        font-size: 30px;
+    }
+    
+    .subHeading {
+        position: absolute;
+        top: 75px;
+        left: 200px;
+        font-size: 25px;
+    }
+    /* Header Section Code End */
+    
+    .container {
+        position: absolute;
+        top: 30%;
+        background-color: #333;
+        width: 250px;
+        height: 50%;
+    }
+    
+    ul li:first-child a {
+        /* -> accessing the anchor tag inside LIST-ITEM where LIST-ITEM is first child of UNORDERED LIST  */
+        /* -> to add space between top-border and first anchor tag (HOME)   */
+        margin-top: 50px;
+    }
+    
+    .container a {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        width: 100%;
+        height: 40px;
+        text-align: center;
+        padding: 10px;
+        /* -> LETTER-SPACE use to add space between character by default the value of letter spacing is 0 */
+        letter-spacing: 1px;
+    }
+    
+    li a:hover {
+        letter-spacing: 2px;
+        color: white;
+        background-color: black;
+    }
+    
+    .mainContainer {
+        height: 60%;
+        width: 70%;
+        position: absolute;
+        right: 60px;
+        top: 25%;
+        background: #333;
+    }
+    
+    .footer {
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        background: #333;
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+        padding: 30px;
+    }
+    
+    .footer i {
+        padding-left: 20px;
+    }
+    
+    .footer i:hover {
+        color: royalblue;
+        transform: translateY(-10px);
+        /* TranslateY change the y-axis of element */
+        /* positive value will change y-axis is downwards and negtive value change in upwards */
+    }
+    
+    i.ig-logo:hover {
+        /* Accessing the i with class( ig-logo ) */
+        /* to add different color to instagram logo on hover */
+        color: #e95950;
+    }
+    
+    i.yt-logo:hover {
+        /* Accessing the i with class( yt-logo ) */
+        /* to add different color to youtube logo on hover */
+        color: #ff0000;
+    }
+    /* ----------------------------- */
+    /* About us Page Css */
+    
+    .aboutusContent {
+        height: 100%;
+        max-width: 100%;
+        width: 100%;
+        background-size: cover;
+        overflow: auto;
+        position: relative;
+    }
+    
+    .aboutusContent .studingat {
+        height: 90%;
+        width: 100%;
+        background: url('https://www.princeton.edu/sites/default/files/styles/1x_full_2x_half_crop/public/images/2017/03/20160315_SNR_Thesis_bootcamp_DJA_022.jpg?itok=MnTrwEIz');
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .aboutusContent .studingat h2 {
+        font-size: 60px;
+        width: 300px;
+        color: #fff;
+        position: absolute;
+        left: 60px;
+        top: 260px;
+        background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.5) 35%, rgba(0, 0, 0, 0.25) 54%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0.5) 100%);
+    }
+    
+    .aboutusContent .testimonial {
+        height: 400px;
+        width: 100%;
+        background-color: black;
+        color: #fff;
+        position: relative;
+        padding: 40px;
+    }
+    
+    .aboutusContent .graduateExp img,
+    .aboutusContent .testimonial img {
+        width: 30%;
+        float: right;
+        margin-top: 5%;
+    }
+    /* by using comma between selector will apply same style to all selector */
+    
+    .aboutusContent .graduateExp p,
+    .aboutusContent .undergraduateExp p,
+    .aboutusContent .testimonial p {
+        width: 60%;
+        margin: 60px 20px 0px 50px;
+        font-size: 24px;
+        text-align: justify;
+        /* text align justify will align text from both side */
+    }
+    
+    .aboutusContent .graduateExp,
+    .aboutusContent .undergraduateExp {
+        height: 400px;
+        width: 100%;
+        background-color: #333;
+    }
+    
+    .aboutusContent .undergraduateExp img {
+        width: 30%;
+        float: left;
+        margin-top: 5%;
+    }
+    
+    .aboutusContent .undergraduateExp h2 {
+        padding: 50px 50px 0;
+        font-size: 30px;
+        color: #fff;
+        margin-left: 300px;
+    }
+    
+    .aboutusContent .undergraduateExp p {
+        font-size: 20px;
+        margin-top: 20px;
+        color: #fff;
+        margin-left: 350px;
+    }
+    
+    .aboutusContent .graduateExp {
+        background-color: cornsilk;
+    }
+    
+    .aboutusContent .graduateExp h2 {
+        padding: 50px 50px 0;
+        /* first for top -- Second for right and left -- third for bottom */
+        font-size: 30px;
+    }
+    
+    .aboutusContent .graduateExp p {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <nav>
+            <img src="https://aiu.edu.pk/html/treely/images/logoaiu.png" width="150">
+            <h2 class="mainHeading"> Alhamd Islamic University</h2><br>
+            <h3 class="subHeading"> We Change Lives</h3>
+        </nav>
+    </div>
+    <!-- Sidebar Container -->
+    <div class="container">
+
+        <ul>
+            <li><a href="home.html">Home</a></li><br>
+            <br>
+            <li><a href="news.html">News</a></li><br>
+            <br>
+            <li><a href="">Contact</a></li><br>
+            <br>
+            <li><a href="aboutus.html">About</a></li><br>
+            <br>
+        </ul>
+    </div>
+
+    <!-- Main Container where content dynamically change according to page-->
+    <div class="mainContainer">
+
+        <!-- aboutusContent -->
+        <div class="aboutusContent">
+            <div class="studingat">
+                <h2>Studing at Alhamd</h2>
+            </div>
+
+            <div class="testimonial">
+                <img src="https://www.princeton.edu/sites/default/files/styles/squarish_halfish_1x/public/images/2017/03/eisgruber-indoor.jpg?itok=CnpfbhkH" alt="">
+                <p>“I came to Princeton because I wanted a liberal arts education that would enable me to pursue multiple interests rigorously and deeply. I concentrated in physics, but the courses that most shaped my intellectual life were in constitutional
+                    law, political theory and comparative literature.”</p>
+            </div>
+
+            <div class="undergraduateExp">
+                <img src="https://www.princeton.edu/sites/default/files/styles/squarish_halfish_1x/public/images/2017/03/20141105FRS_ChihayaS_076s.jpg?itok=pLSB0JXv" alt="">
+                <h2>Undergraduate Experience
+                </h2>
+                <p>Princeton’s commitment to undergraduate education is profound. As a student, you benefit from the extraordinary resources of a world-class teaching and research university, and our low student-to-faculty ratio means you are able to develop
+                    close working relationships with professors who are leaders in their fields. Our curriculum emphasizes learning, creativity, innovation and collaboration with a program of liberal arts in the humanities, arts, social sciences, natural
+                    sciences and engineering. You will explore many disciplines and also develop a deep understanding in one area of concentration.</p>
+            </div>
+            <div class="graduateExp">
+                <img src="https://www.princeton.edu/sites/default/files/styles/squarish_halfish_1x/public/images/2017/03/20150223__LisantiM_Physics_DJA_024.jpg?itok=qvssfEeV" alt="">
+                <h2>Graduate Student Experience</h2>
+                <p>As a graduate student at Princeton, you will become part of a community of scholars at one of the world’s leading research universities. You will work closely with our distinguished faculty, who routinely push the frontiers of human knowledge
+                    with their research and scholarship.Our focus is on doctoral education, with a select number of master’s degree programs. Ph.D. degrees across the humanities, social sciences, natural sciences and engineering emphasize original and
+                    independent scholarship. </p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <!-- These icons are coming from link at line number 8  -->
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram ig-logo"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube yt-logo"></i>
+        <i class="fa-solid fa-copyright"></i>
+        <i class="fa-solid fa-registered"></i>
+    </div>
+
+</body>
+
+</html>
