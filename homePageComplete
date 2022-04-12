@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+
+    <style>
+        /*  (header mainContent footer) CSS code that will remain same in all the pages */
+        
+        * {
+            /*  ( * ) selector is used to select all elements in  webpage */
+            padding: 0;
+            margin: 0;
+            font-family: 'Trebuchet MS', sans-serif;
+            box-sizing: border-box;
+            transition: all 700ms ease;
+        }
+        /* Header Section Code Start */
+        
+        .header {
+            padding: 10px;
+            width: 100%;
+            background: #333;
+            color: #fff;
+        }
+        
+        .mainHeading,
+        .subHeading {
+            position: absolute;
+            top: 30px;
+            left: 200px;
+            font-size: 30px;
+        }
+        
+        .subHeading {
+            position: absolute;
+            top: 75px;
+            left: 200px;
+            font-size: 25px;
+        }
+        /* Header Section Code End */
+        
+        .container {
+            position: absolute;
+            top: 30%;
+            background-color: #333;
+            width: 250px;
+            height: 50%;
+        }
+        
+        ul li:first-child a {
+            /* -> accessing the anchor tag inside LIST-ITEM where LIST-ITEM is first child of UNORDERED LIST  */
+            /* -> to add space between top-border and first anchor tag (HOME)   */
+            margin-top: 50px;
+        }
+        
+        .container a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            padding: 10px;
+            /* -> LETTER-SPACE use to add space between character by default the value of letter spacing is 0 */
+            letter-spacing: 1px;
+        }
+        
+        li a:hover {
+            letter-spacing: 2px;
+            color: white;
+            background-color: black;
+        }
+        
+        .mainContainer {
+            height: 60%;
+            width: 70%;
+            position: absolute;
+            right: 60px;
+            top: 25%;
+            background: #333;
+        }
+        
+        .footer {
+            height: 100px;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            background: #333;
+            color: #fff;
+            font-size: 30px;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .footer i {
+            padding-left: 20px;
+        }
+        
+        .footer i:hover {
+            color: royalblue;
+            transform: translateY(-10px);
+            /* TranslateY change the y-axis of element */
+            /* positive value will change y-axis is downwards and negtive value change in upwards */
+        }
+        
+        i.ig-logo:hover {
+            /* Accessing the i with class( ig-logo ) */
+            /* to add different color to instagram logo on hover */
+            color: #e95950;
+        }
+        
+        i.yt-logo:hover {
+            /* Accessing the i with class( yt-logo ) */
+            /* to add different color to youtube logo on hover */
+            color: #ff0000;
+        }
+        /* Home Page Css */
+        
+        .homeContent {
+            /* container that will hold home page content */
+            /* assigning full height and width to homeContent */
+            /* homeContent will take full width and height of its parent container( mainContainer) */
+            height: 100%;
+            width: 100%;
+            padding: 20px;
+        }
+        
+        .homeContent .navHome {
+            height: 70px;
+            width: 90%;
+            background: #fff;
+            border-radius: 35px;
+            padding: 20px;
+            position: relative;
+            left: 50px;
+            top: 20px;
+        }
+        
+        .navHome span h2 {
+            /* accessing h2 inside span which is inside a navHome(class) */
+            text-align: left;
+            display: inline-block;
+        }
+        
+        .navHome .spanLink {
+            /* accessing the spanLink(class) which is inside navHome(class) */
+            float: right;
+            /* float right will stick element to right of its parent */
+        }
+        
+        .navHome .spanLink a {
+            /* accessing the anchor tag inside spanLink(class) and where spanLink is inside a navHome(class) */
+            text-decoration: none;
+            margin: 4px 20px;
+            font-size: 18px;
+            color: #333;
+            display: inline-block;
+            cursor: pointer;
+            /* cursor pointer will change the cursor style to hand on mouse-over */
+            transition: all 0.2s ease;
+        }
+        
+        .spanLink a:hover {
+            color: #007bff;
+        }
+        
+        .homeContent img {
+            height: 400px;
+            position: absolute;
+            top: 30px;
+            left: 30%;
+            pointer-events: none;
+            /* pointer event will disable all mouse event */
+        }
+        
+        .homeContent button {
+            position: absolute;
+            bottom: 40px;
+            left: 30%;
+            height: 40px;
+            width: 200px;
+            text-align: left;
+            padding-left: 25px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.5s ease-in-out;
+        }
+        
+        .homeContent .btn1 {
+            color: #333;
+            border-radius: 20px 0 0 20px;
+            /* --> first value is for top-left   border*/
+            /* --> second value is for top-right  border*/
+            /* --> third value is for bottom-right  border*/
+            /* --> fourth value is for bottom-left   border */
+        }
+        
+        .homeContent .btn2 {
+            left: 48%;
+            background: #007bff;
+            color: #fff;
+            border-radius: 0 20px 20px 0;
+            /* --> first value is for top-left  border*/
+            /* --> first value is for top-right  border*/
+            /* --> first value is for bottom-right border */
+            /* --> first value is for bottom-left  border  */
+        }
+        
+        .homeContent button:hover {
+            background-color: #dc3545;
+            color: #fff;
+            letter-spacing: 0.2px;
+            animation: showShadow 1s ease;
+            /* first value showShadow is the name of animation */
+            /* Second value duration of animation */
+            /* third value is effect ( how animation will happen) */
+        }
+        
+        @keyframes showShadow {
+            /* animation will happen on 50% of animation duration which is 1seconds  */
+            /* 50% of 1 second is 500mille-seconds  */
+            50% {
+                box-shadow: 0px 0px 100px 10px #dc3545;
+                /* first value is for horizental */
+                /* second value is for vertical */
+                /* third value is for blur */
+                /* fourth value is for spread */
+            }
+        }
+    </style>
+
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="header">
+        <nav>
+            <img src="https://aiu.edu.pk/html/treely/images/logoaiu.png" width="150">
+            <h2 class="mainHeading"> Alhamd Islamic University</h2><br>
+            <h3 class="subHeading"> We Change Lives</h3>
+        </nav>
+    </div>
+    <!-- Sidebar Container -->
+    <div class="container">
+
+        <ul>
+            <li><a href="#home">Home</a></li><br>
+            <br>
+            <li><a href="#news">News</a></li><br>
+            <br>
+            <li><a href="#contact">Contact</a></li><br>
+            <br>
+            <li><a href="#about">About</a></li><br>
+            <br>
+        </ul>
+    </div>
+
+    <!-- Main Container where content dynamically change according to page-->
+    <div class="mainContainer">
+
+        <!-- Home Content contain home page content only -->
+        <div class="homeContent">
+
+            <div class="navHome">
+                <span><h2>Alhamd Islamic University</h2></span>
+                <span class="spanLink">
+                    <a href="" class="homeA">Home</a>
+                    <a href="" class="homeA">About us</a>
+                    <a href="" class="homeA">Contact Us</a>
+                    <a href="" class="homeA">Exams</a>
+                </span>
+            </div>
+
+            <div class="home-innerContent">
+                <img src="http://aiu.edu.pk/html/treely/images/keyboard_apple_22.png" alt="">
+                <button class="btn1">Islamabad Campus</button>
+                <button class="btn2">Quetta Campus</button>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <!-- These icons are coming from link at line number 8  -->
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram ig-logo"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube yt-logo"></i>
+        <i class="fa-solid fa-copyright"></i>
+        <i class="fa-solid fa-registered"></i>
+    </div>
+
+</body>
+
+</html>
