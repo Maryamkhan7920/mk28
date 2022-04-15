@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Project</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 </head>
@@ -20,7 +20,7 @@
     }
 
     body{
-        /*overflow: hidden;*/
+        overflow: hidden;
     }
     /* Header Section Code Start */
 
@@ -50,13 +50,12 @@
 
     .container {
         position: absolute;
-        top: 18%;
+        top: 19%;
         background-color: lightblue;
-
+height: 80% ;
         width: 150px;
     
-        padding-bottom: 700px;
-    }
+        }
 
     ul li:first-child a {
         /* -> accessing the anchor tag inside LIST-ITEM where LIST-ITEM is first child of UNORDERED LIST  */
@@ -83,11 +82,11 @@
     }
 
     .mainContainer {
-        height: 50%;
+        height: 80%;
         width: 92.5%;
         position: absolute;
         right: 0px;
-        top: 20%;
+        top: 19%;
         background: indigo;
         padding-left: 100px;
     }
@@ -110,7 +109,7 @@
 
     .footer i:hover {
         color: royalblue;
-        transform: translateY(-10px);
+        transform: translateY(10px);
         /* TranslateY change the y-axis of element */
         /* positive value will change y-axis is downwards and negtive value change in upwards */
     }
@@ -126,6 +125,10 @@
         /* to add different color to youtube logo on hover */
         color: #ff0000;
     }
+    i.twt:hover{
+        transform: translateY(10px);
+        color: blue;
+    }
 </style>
 
 <body>
@@ -140,20 +143,20 @@
     <div class="container">
 
         <ul>
-            <li><a href="mkpro32.html">Home</a></li><br>
+            <li><a href="home.html">Home</a></li><br>
             <br>
-            <li><a href="#news">News</a></li><br>
+            <li><a href="mkpro33.html">News</a></li><br>
             <br>
-            <li><a href="#contact">Contact</a></li><br>
+            <li><a href="mkpro34.html">Contact</a></li><br>
             <br>
-            <li><a href="#about">About</a></li><br>
+            <li><a href="mkpro35.html">About</a></li><br>
             <br>
         </ul>
     </div>
 
     <!-- Main Container where content change according to page -->
-    <div class="mainContainer">
-    <center><img src="https://www.aiu.edu.pk/site/wp-content/uploads/2020/08/compus-1024x521.jpg"</center>   
+    <div class="mainContainer" style="background: url('https://www.aiu.edu.pk/site/wp-content/uploads/2020/08/compus-1024x521.jpg'); background-repeat:  no-repeat;
+    background-size: cover; background-position: center;">
     </div>
 
 
@@ -162,10 +165,11 @@
         <!-- These icons are coming from link at line number 8  -->
         <i class="fa-brands fa-facebook"></i>
         <i class="fa-brands fa-instagram ig-logo"></i>
-        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-twitter twt"></i>
         <i class="fa-brands fa-youtube yt-logo"></i>
         <i class="fa-solid fa-copyright"></i>
         <i class="fa-solid fa-registered"></i>
+        <i class="fa-brands fa-youtube"></i>
     </div>
 
 </body>
